@@ -1,0 +1,19 @@
+services:
+  backend:
+    command: make dev-go
+    watch:
+      - .env
+      - .env.local
+      - Makefile
+      - go.mod
+      - main.go
+      - src/backend
+    exclude: []
+  frontend:
+    command: make dev-npm
+    watch:
+      - Makefile
+      - package.json
+      - package-lock.json
+      - src/frontend
+    exclude: []

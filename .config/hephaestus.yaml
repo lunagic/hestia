@@ -1,0 +1,9 @@
+default_port: 2222
+docker_image: ghcr.io/lunagic/hestia
+frontend_out_paths:
+  - src/backend/resources/dist
+hera_watch_paths:
+  backend:
+    - src/backend
+  frontend:
+    - src/frontend
