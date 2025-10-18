@@ -1,0 +1,15 @@
+@import url("./reset.scss");
+@import url("./colors.scss");
+
+body {
+    background-color: var(--reset-css-background-primary);
+    color: var(--reset-css-foreground-primary);
+    font-family: sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+}

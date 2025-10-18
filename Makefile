@@ -1,4 +1,4 @@
-.PHONY: full clean lint lint-go fix fix-go test test-go build build-go dev-go watch watch-npm watch-go docker-build docker-test docs-go
+.PHONY: full clean lint lint-npm lint-go fix fix-npm fix-go test test-npm test-go build build-npm build-go dev-npm dev-go watch watch-npm watch-go docker-build docker-test docs-go
 
 SHELL=/bin/bash -o pipefail
 $(shell git config core.hooksPath ops/git-hooks)
@@ -12,7 +12,11 @@ clean:
 	git clean -Xdff --exclude="!.env.local" --exclude="!.env.*.local"
 
 ## Lint the project
-lint: lint-go
+lint: lint-npm lint-go
+
+lint-npm:
+	npm install
+	npm run lint
 
 lint-go:
 	@go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.1.5
@@ -20,14 +24,22 @@ lint-go:
 	golangci-lint run ./...
 
 ## Fix the project
-fix: fix-go
+fix: fix-npm fix-go
+
+fix-npm:
+	npm install
+	npm run fix
 
 fix-go:
 	go mod tidy
 	gofmt -s -w .
 
 ## Test the project
-test: test-go
+test: test-npm test-go
+
+test-npm:
+	npm install
+	npm run test
 
 test-go:
 	@go install github.com/boumenot/gocover-cobertura@latest
@@ -38,12 +50,18 @@ test-go:
 	@gocover-cobertura < .config/tmp/coverage/go/profile.txt > .config/tmp/coverage/go/cobertura-coverage.xml
 
 ## Build the project
-build: build-go
+build: build-npm build-go
+
+build-npm:
+	npm install
+	npm run build
 
 build-go:
 	go generate
 	go build -ldflags='-s -w' -o .config/tmp/build/hestia .
 	go install .
+
+dev-npm: build-npm
 
 dev-go:
 	go run . | jq

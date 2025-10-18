@@ -6,6 +6,7 @@ services:
       - .env.local
       - Makefile
       - go.mod
+      - go.sum
       - main.go
       - src/backend
     exclude: []
@@ -15,5 +16,11 @@ services:
       - Makefile
       - package.json
       - package-lock.json
+      - tsconfig.json
       - src/frontend
+    exclude: []
+  storybook:
+    command: npm run storybook
+    watch:
+      - .storybook
     exclude: []

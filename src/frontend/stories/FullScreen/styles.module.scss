@@ -1,0 +1,15 @@
+.main {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    height: 100dvh;
+    width: 100dvw;
+
+    // This is meant for OLEDs and padding is just a waste of space,
+    // white screens will need some padding not to look weird
+    @media (prefers-color-scheme: light) {
+        & {
+            padding: 1rem;
+        }
+    }
+}

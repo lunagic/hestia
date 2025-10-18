@@ -13,6 +13,7 @@ __debug_bin*
 
 # npm
 /node_modules/
+tsconfig.tsbuildinfo
 
 # Frontend Out Paths
 src/backend/resources/dist

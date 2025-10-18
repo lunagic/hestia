@@ -1,0 +1,25 @@
+.main {
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+
+@keyframes blinker-visibility {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.progressBarBlink {
+    animation: blinker-visibility 1s linear infinite;
+}
