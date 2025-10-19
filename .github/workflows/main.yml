@@ -7,20 +7,14 @@ name: Main
 jobs:
   deploy:
     needs: publish
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-      - env:
-          DOKPLOY_URL: ${{ secrets.DOKPLOY_URL }}
-          DOKPLOY_TOKEN: ${{ secrets.DOKPLOY_TOKEN }}
+      - run: 'curl -X POST "$DOKPLOY_URL/api/application.deploy" -H "x-api-key: $DOKPLOY_TOKEN" -H "Content-Type: application/json" -d ''{"applicationId": "''$DOKPLOY_APP_ID''", "title": "Triggered byGitHub Action"}'''
+        env:
           DOKPLOY_APP_ID: ${{ secrets.DOKPLOY_APP_ID }}
-        run: |
-          curl -X POST "$DOKPLOY_URL/api/application.deploy" \
-            -H "x-api-key: $DOKPLOY_TOKEN" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "applicationId": "'$DOKPLOY_APP_ID'",
-              "title": "Triggered byGitHub Action"
-            }'
+          DOKPLOY_TOKEN: ${{ secrets.DOKPLOY_TOKEN }}
+          DOKPLOY_URL: ${{ secrets.DOKPLOY_URL }}
   publish:
     needs: validate
     if: github.ref == 'refs/heads/main'

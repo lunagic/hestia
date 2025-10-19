@@ -1,4 +1,5 @@
 default_port: 2222
+docker_deploy: dokploy
 docker_image: ghcr.io/lunagic/hestia
 frontend_out_paths:
   - src/backend/resources/dist
