@@ -25,8 +25,12 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           username: ${{ github.actor }}
-      - run: docker push ghcr.io/${{ github.repository }}:latest
+      - name: Push image
+        uses: docker/build-push-action@v5
         with:
+          context: .
+          push: true
+          tags: ghcr.io/${{ github.repository }}:latest
           cache-from: type=gha
   build:
     runs-on: ubuntu-latest
