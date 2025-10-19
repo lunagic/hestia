@@ -34,9 +34,13 @@ jobs:
   #       with:
   #         node-version: "24"
   #     - run: make
-  - name: Deploy to Dokploy
-    uses: Crokily/dokploy-deploy-action@main
-    with:
-      dokploy_url: ${{ secrets.DOKPLOY_URL }}
-      auth_token: ${{ secrets.DOKPLOY_TOKEN }}
-      application_id: ${{ secrets.DOKPLOY_APP_ID }}
+  deploy:
+    # needs: publish
+    runs-on: ubuntu-latest
+    steps:
+    - name: Dokploy Deployment
+      uses: benbristow/dokploy-deploy-action@0.0.1
+      with:
+        dokploy_url: ${{ secrets.DOKPLOY_URL }}
+        auth_token: ${{ secrets.DOKPLOY_TOKEN }}
+        application_id: ${{ secrets.DOKPLOY_APP_ID }}
