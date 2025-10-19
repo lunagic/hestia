@@ -47,6 +47,6 @@ jobs:
             -H "x-api-key: $DOKPLOY_TOKEN" \
             -H "Content-Type: application/json" \
             -d '{
-              "applicationId": "$DOKPLOY_APP_ID",
+              "applicationId": "'$DOKPLOY_APP_ID'",
               "title": "Triggered byGitHub Action"
             }'
