@@ -41,10 +41,11 @@ jobs:
       - env:
           DOKPLOY_URL: ${{ secrets.DOKPLOY_URL }}
           DOKPLOY_TOKEN: ${{ secrets.DOKPLOY_TOKEN }}
+          DOKPLOY_SERVICE: ${{ secrets.DOKPLOY_SERVICE }}
         run: |
           curl -X POST "$DOKPLOY_URL/deploy" \
             -H "Authorization: Bearer $DOKPLOY_TOKEN" \
             -H "Content-Type: application/json" \
             -d '{
-              "service": "${{ DOKPLOY_SERVICE }}"
+              "service": "$DOKPLOY_SERVICE"
             }'
