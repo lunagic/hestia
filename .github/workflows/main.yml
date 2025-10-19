@@ -26,7 +26,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
       - run: docker push ghcr.io/${{ github.repository }}:latest
-        cache-from: type=gha
+        with:
+          cache-from: type=gha
   build:
     runs-on: ubuntu-latest
     steps:
