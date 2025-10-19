@@ -34,3 +34,17 @@ jobs:
         with:
           node-version: "24"
       - run: make
+  deploy:
+    needs: publish
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          DOKPLOY_URL: ${{ secrets.DOKPLOY_URL }}
+          DOKPLOY_TOKEN: ${{ secrets.DOKPLOY_TOKEN }}
+        run: |
+          curl -X POST "$DOKPLOY_URL/deploy" \
+            -H "Authorization: Bearer $DOKPLOY_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "service": "${{ DOKPLOY_SERVICE }}"
+            }'
