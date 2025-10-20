@@ -6,7 +6,7 @@ export default {
 		layout: "Dashboard",
 	},
 	tags: ["autodocs"],
-	title: "Components/Dashboard",
+	title: "Hestia/Components/Dashboard",
 }
 
 export const Primary = () => {

@@ -3,7 +3,7 @@ import { FullScreenButton } from "."
 export default {
 	component: FullScreenButton,
 	tags: ["autodocs"],
-	title: "Components/FullScreenButton",
+	title: "Aphrodite/Components/FullScreenButton",
 }
 
 export const Primary = {

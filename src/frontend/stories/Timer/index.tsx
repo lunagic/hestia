@@ -1,6 +1,6 @@
 import { Button, useCurrentTime } from "@lunagic/aphrodite"
 import { ares, time } from "@lunagic/ares"
-import type { CSSProperties } from "preact/compat"
+import type { CSSProperties } from "preact"
 import { useState } from "preact/hooks"
 import styles from "./styles.module.scss"
 

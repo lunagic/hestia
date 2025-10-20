@@ -3,7 +3,7 @@ import { RefreshButton } from "."
 export default {
 	component: RefreshButton,
 	tags: ["autodocs"],
-	title: "Components/RefreshButton",
+	title: "Aphrodite/Components/RefreshButton",
 }
 
 export const Primary = {

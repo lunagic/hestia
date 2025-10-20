@@ -6,7 +6,7 @@ export default {
 		layout: "Button",
 	},
 	tags: ["autodocs"],
-	title: "Components/Button",
+	title: "Aphrodite/Components/Button",
 }
 
 export const Primary = () => {

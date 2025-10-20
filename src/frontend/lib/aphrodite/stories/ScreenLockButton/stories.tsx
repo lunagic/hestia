@@ -3,7 +3,7 @@ import { ScreenLockButton } from "."
 export default {
 	component: ScreenLockButton,
 	tags: ["autodocs"],
-	title: "Components/ScreenLockButton",
+	title: "Aphrodite/Components/ScreenLockButton",
 }
 
 export const Primary = {

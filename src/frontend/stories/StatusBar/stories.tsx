@@ -6,7 +6,7 @@ export default {
 		layout: "StatusBar",
 	},
 	tags: ["autodocs"],
-	title: "Components/StatusBar",
+	title: "Hestia/Components/StatusBar",
 }
 
 export const Primary = () => {

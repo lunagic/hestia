@@ -1,4 +1,4 @@
-import type { CSSProperties, MouseEventHandler } from "preact/compat"
+import type { CSSProperties, MouseEventHandler } from "preact"
 import styles from "./styles.module.scss"
 
 type ButtonProps = {

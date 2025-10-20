@@ -7,7 +7,7 @@ export default {
 		layout: "DropDown",
 	},
 	tags: ["autodocs"],
-	title: "Components/DropDown",
+	title: "Aphrodite/Components/DropDown",
 }
 
 export const Primary = () => {

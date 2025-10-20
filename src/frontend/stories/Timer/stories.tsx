@@ -6,7 +6,7 @@ export default {
 		layout: "fullscreen",
 	},
 	tags: ["autodocs"],
-	title: "Components/Timer",
+	title: "Hestia/Components/Timer",
 }
 
 export const Primary = () => {

@@ -6,7 +6,7 @@ export default {
 		layout: "fullscreen",
 	},
 	tags: ["autodocs"],
-	title: "Components/LoreCounter",
+	title: "Hestia/Components/LoreCounter",
 }
 
 export const Primary = () => {

@@ -1,11 +1,5 @@
-import "./styles/index.scss"
-import {
-	Button,
-	Dashboard,
-	FullScreen,
-	LoreCounter,
-	StatusBar,
-} from "@lunagic/aphrodite"
+import "@/styles/index.scss"
+import { Button, FullScreen } from "@lunagic/aphrodite"
 import { render } from "preact"
 import {
 	ErrorBoundary,
@@ -14,6 +8,9 @@ import {
 	Router,
 	useLocation,
 } from "preact-iso"
+import { Dashboard } from "@/stories/Dashboard"
+import { LoreCounter } from "@/stories/LoreCounter"
+import { StatusBar } from "@/stories/StatusBar"
 
 // window.addEventListener("load", () => {
 // 	navigator.serviceWorker.register("/service-worker.js")

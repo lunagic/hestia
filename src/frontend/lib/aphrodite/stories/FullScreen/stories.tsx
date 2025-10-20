@@ -6,7 +6,7 @@ export default {
 		layout: "fullscreen",
 	},
 	tags: ["autodocs"],
-	title: "Components/FullScreen",
+	title: "Aphrodite/Components/FullScreen",
 }
 
 export const Primary = () => {
