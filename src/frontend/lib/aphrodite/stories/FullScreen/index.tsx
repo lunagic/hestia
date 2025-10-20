@@ -1,4 +1,4 @@
-import type { CSSProperties } from "preact/compat"
+import type { CSSProperties } from "preact"
 import styles from "./styles.module.scss"
 
 type FullScreenProps = {

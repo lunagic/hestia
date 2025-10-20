@@ -1,3 +1,4 @@
+import { Button } from "@lunagic/aphrodite"
 import { time } from "@lunagic/ares"
 import {
 	type Dispatch,
@@ -5,7 +6,6 @@ import {
 	useEffect,
 	useState,
 } from "preact/hooks"
-import { Button } from "../Button"
 
 type RefreshButtonProps = {
 	needsRefresh: boolean

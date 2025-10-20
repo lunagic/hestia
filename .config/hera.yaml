@@ -15,7 +15,6 @@ services:
     watch:
       - Makefile
       - package.json
-      - package-lock.json
       - tsconfig.json
       - src/frontend
     exclude: []

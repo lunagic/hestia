@@ -1,13 +1,15 @@
+import {
+	DropDown,
+	FullScreenButton,
+	RefreshButton,
+	ScreenLockButton,
+} from "@lunagic/aphrodite"
+import { ares } from "@lunagic/ares"
 import { useState } from "preact/hooks"
 import { useLocation } from "preact-iso"
-import { forge } from "../../internal/forge"
-import { useBatteryManager } from "../../internal/hooks/useBatteryManager"
-import { useCurrentTime } from "../../internal/hooks/useCurrentTime"
-import { useCurrentWeather } from "../../internal/hooks/useCurrentWeather"
-import { DropDown } from "../DropDown"
-import { FullScreenButton } from "../FullScreenButton"
-import { RefreshButton } from "../RefreshButton"
-import { ScreenLockButton } from "../ScreenLockButton"
+import { useBatteryManager } from "../../hooks/useBatteryManager"
+import { useCurrentTime } from "../../hooks/useCurrentTime"
+import { useCurrentWeather } from "../../hooks/useCurrentWeather"
 import styles from "./styles.module.scss"
 
 export const StatusBar = () => {
@@ -25,7 +27,7 @@ export const StatusBar = () => {
 	let batteryLevel = <></>
 	if (batteryManager && batteryManager.charging === false) {
 		batteryLevel = (
-			<div>{forge.DurationToClock(batteryManager.dischargingTime * 1000)}</div>
+			<div>{ares.DurationToClock(batteryManager.dischargingTime * 1000)}</div>
 		)
 	}
 
@@ -171,7 +173,7 @@ export const StatusBar = () => {
 			>
 				{batteryLevel}
 				{currentWeather.Display && <div>{currentWeather.Display}</div>}
-				<div>{forge.DisplayDateAndTime(currentTime)}</div>
+				<div>{ares.DisplayDateAndTime(currentTime)}</div>
 			</div>
 		</div>
 	)

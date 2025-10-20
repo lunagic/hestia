@@ -1,6 +1,5 @@
-import { time } from "@lunagic/ares"
+import { ares, time } from "@lunagic/ares"
 import { useEffect, useState } from "preact/hooks"
-import { forge } from "../forge"
 
 export type CurrentWeather = {
 	Display: string
@@ -66,7 +65,7 @@ export const useCurrentWeather = (): CurrentWeather => {
 		? `${temperatureC.toFixed(1)}°C`
 		: ""
 	return {
-		Display: forge.PrefersTemperatureFahrenheit()
+		Display: ares.PrefersTemperatureFahrenheit()
 			? temperatureFahrenheitString
 			: temperatureCelsiusString,
 		Error: error,

@@ -1,4 +1,4 @@
-import type { CSSProperties } from "preact/compat"
+import type { CSSProperties } from "preact"
 import { type Dispatch, type StateUpdater, useState } from "preact/hooks"
 
 type PlayerProps = {

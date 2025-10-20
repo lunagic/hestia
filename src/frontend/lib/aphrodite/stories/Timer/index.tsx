@@ -1,9 +1,8 @@
-import { time } from "@lunagic/ares"
+import { Button } from "@lunagic/aphrodite"
+import { ares, time } from "@lunagic/ares"
 import type { CSSProperties } from "preact/compat"
 import { useState } from "preact/hooks"
-import { forge } from "../../internal/forge"
-import { useCurrentTime } from "../../internal/hooks/useCurrentTime"
-import { Button } from "../Button"
+import { useCurrentTime } from "../../hooks/useCurrentTime"
 import styles from "./styles.module.scss"
 
 export const Timer = () => {
@@ -17,7 +16,7 @@ export const Timer = () => {
 	}
 
 	const options: time.Time[][] = []
-	forge.forEachN(4, (i: number) => {
+	ares.forEachN(4, (i: number) => {
 		const roundedDownTime = currentTime.Truncate(time.Hour)
 
 		const subOptions: time.Time[] = [
@@ -59,7 +58,7 @@ export const Timer = () => {
 											startTimer(optionTime)
 										}}
 									>
-										{forge.DisplayTime(optionTime)}
+										{ares.DisplayTime(optionTime)}
 									</Button>
 								)
 							})}
@@ -135,7 +134,7 @@ export const Timer = () => {
 					justifyContent: "center",
 				}}
 			>
-				{forge.DurationToClock(durationRemainingActual)}
+				{ares.DurationToClock(durationRemainingActual)}
 			</div>
 			<div
 				style={{

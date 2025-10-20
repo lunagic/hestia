@@ -1,4 +1,5 @@
-import type { CSSProperties, Dispatch } from "preact/compat"
+import type { CSSProperties } from "preact"
+import type { Dispatch } from "preact/compat"
 import type { StateUpdater } from "preact/hooks"
 
 type DropDownProps = {

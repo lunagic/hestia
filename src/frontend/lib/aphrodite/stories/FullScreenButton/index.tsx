@@ -1,5 +1,5 @@
+import { Button } from "@lunagic/aphrodite"
 import { type Dispatch, type StateUpdater, useEffect } from "preact/hooks"
-import { Button } from "../Button"
 
 type FullScreenButtonProps = {
 	fullScreen: boolean
