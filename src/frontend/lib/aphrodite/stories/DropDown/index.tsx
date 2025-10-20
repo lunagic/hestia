@@ -41,8 +41,8 @@ export const DropDown = (props: DropDownProps) => {
 			</div>
 			<div
 				style={{
-					background: "var(--reset-css-background-secondary)",
-					border: "1px solid var(--reset-css-background-tertiary)",
+					background: "var(--aphrodite-background-secondary)",
+					border: "1px solid var(--aphrodite-background-tertiary)",
 					borderRadius: ".5rem",
 					left: ".5rem",
 					padding: "1rem",

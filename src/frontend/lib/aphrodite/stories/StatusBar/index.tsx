@@ -3,13 +3,13 @@ import {
 	FullScreenButton,
 	RefreshButton,
 	ScreenLockButton,
+	useBatteryManager,
+	useCurrentTime,
+	useCurrentWeather,
 } from "@lunagic/aphrodite"
 import { ares } from "@lunagic/ares"
 import { useState } from "preact/hooks"
 import { useLocation } from "preact-iso"
-import { useBatteryManager } from "../../hooks/useBatteryManager"
-import { useCurrentTime } from "../../hooks/useCurrentTime"
-import { useCurrentWeather } from "../../hooks/useCurrentWeather"
 import styles from "./styles.module.scss"
 
 export const StatusBar = () => {

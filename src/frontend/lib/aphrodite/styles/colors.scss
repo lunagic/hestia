@@ -1,53 +1,53 @@
 @mixin colorsDark {
-    --reset-css-foreground-primary: #d7d7d7;
-    --reset-css-foreground-secondary: #868686;
+    --aphrodite-foreground-primary: #d7d7d7;
+    --aphrodite-foreground-secondary: #868686;
 
-    --reset-css-background-primary: #000000;
-    --reset-css-background-secondary: #161616;
-    --reset-css-background-tertiary: #323232;
-    --reset-css-background-layered: rgba(255, 255, 255, .05);
+    --aphrodite-background-primary: #000000;
+    --aphrodite-background-secondary: #161616;
+    --aphrodite-background-tertiary: #323232;
+    --aphrodite-background-layered: rgba(255, 255, 255, .05);
 
-    --reset-css-accent-primary: #00bfff;
-    --reset-css-accent-secondary: #00bfff;
-    --reset-css-accent-text: #000000;
+    --aphrodite-accent-primary: #00bfff;
+    --aphrodite-accent-secondary: #00bfff;
+    --aphrodite-accent-text: #000000;
 
-    --reset-css-success-primary: #26c940;
-    --reset-css-success-secondary: #38d951;
-    --reset-css-success-text: #000000;
+    --aphrodite-success-primary: #26c940;
+    --aphrodite-success-secondary: #38d951;
+    --aphrodite-success-text: #000000;
 
-    --reset-css-warning-primary: #febb2e;
-    --reset-css-warning-secondary: #fecc61;
-    --reset-css-warning-text: #000000;
+    --aphrodite-warning-primary: #febb2e;
+    --aphrodite-warning-secondary: #fecc61;
+    --aphrodite-warning-text: #000000;
 
-    --reset-css-danger-primary: #fe5f57;
-    --reset-css-danger-secondary: #fe6f68;
-    --reset-css-danger-text: #000000;
+    --aphrodite-danger-primary: #fe5f57;
+    --aphrodite-danger-secondary: #fe6f68;
+    --aphrodite-danger-text: #000000;
 }
 
 @mixin colorsLight {
-    --reset-css-foreground-primary: #000000;
-    --reset-css-foreground-secondary: #18181b;
+    --aphrodite-foreground-primary: #000000;
+    --aphrodite-foreground-secondary: #18181b;
 
-    --reset-css-background-primary: #ffffff;
-    --reset-css-background-secondary: #f8f8f8;
-    --reset-css-background-tertiary: #e5e5e5;
-    --reset-css-background-layered: rgba(0, 0, 0, .05);
+    --aphrodite-background-primary: #ffffff;
+    --aphrodite-background-secondary: #f8f8f8;
+    --aphrodite-background-tertiary: #e5e5e5;
+    --aphrodite-background-layered: rgba(0, 0, 0, .05);
 
-    --reset-css-accent-primary: #0057ad;
-    --reset-css-accent-secondary: #0057ad;
-    --reset-css-accent-text: #ffffff;
+    --aphrodite-accent-primary: #0057ad;
+    --aphrodite-accent-secondary: #0057ad;
+    --aphrodite-accent-text: #ffffff;
 
-    --reset-css-success-primary: #26c940;
-    --reset-css-success-secondary: #38d951;
-    --reset-css-success-text: #000000;
+    --aphrodite-success-primary: #26c940;
+    --aphrodite-success-secondary: #38d951;
+    --aphrodite-success-text: #000000;
 
-    --reset-css-warning-primary: #ff9800;
-    --reset-css-warning-secondary: #ff9800;
-    --reset-css-warning-text: #000000;
+    --aphrodite-warning-primary: #ff9800;
+    --aphrodite-warning-secondary: #ff9800;
+    --aphrodite-warning-text: #000000;
 
-    --reset-css-danger-primary: #fe5f57;
-    --reset-css-danger-secondary: #fe6f68;
-    --reset-css-danger-text: #000000;
+    --aphrodite-danger-primary: #fe5f57;
+    --aphrodite-danger-secondary: #fe6f68;
+    --aphrodite-danger-text: #000000;
 }
 
 // Default to light mode

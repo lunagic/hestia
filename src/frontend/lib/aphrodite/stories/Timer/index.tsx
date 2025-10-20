@@ -1,8 +1,7 @@
-import { Button } from "@lunagic/aphrodite"
+import { Button, useCurrentTime } from "@lunagic/aphrodite"
 import { ares, time } from "@lunagic/ares"
 import type { CSSProperties } from "preact/compat"
 import { useState } from "preact/hooks"
-import { useCurrentTime } from "../../hooks/useCurrentTime"
 import styles from "./styles.module.scss"
 
 export const Timer = () => {
@@ -109,7 +108,7 @@ export const Timer = () => {
 	} else if (durationRemaining <= 10 * time.Minute) {
 		progressBarStyle.backgroundColor = "orange"
 	} else {
-		progressBarStyle.backgroundColor = "var(--reset-css-accent-primary)"
+		progressBarStyle.backgroundColor = "var(--aphrodite-accent-primary)"
 	}
 
 	return (

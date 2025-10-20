@@ -1,3 +1,6 @@
+export { useBatteryManager } from "./hooks/useBatteryManager"
+export { useCurrentTime } from "./hooks/useCurrentTime"
+export { useCurrentWeather } from "./hooks/useCurrentWeather"
 export { Button } from "./stories/Button"
 export { Dashboard } from "./stories/Dashboard"
 export { DropDown } from "./stories/DropDown"

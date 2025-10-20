@@ -2,8 +2,8 @@
 @use "./colors.scss";
 
 body {
-    background-color: var(--reset-css-background-primary);
-    color: var(--reset-css-foreground-primary);
+    background-color: var(--aphrodite-background-primary);
+    color: var(--aphrodite-foreground-primary);
     font-family: sans-serif;
 }
 
