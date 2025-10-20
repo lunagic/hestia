@@ -8,9 +8,9 @@ import {
 	Router,
 	useLocation,
 } from "preact-iso"
-import { Dashboard } from "@/stories/Dashboard"
 import { LoreCounter } from "@/stories/LoreCounter"
 import { StatusBar } from "@/stories/StatusBar"
+import { Timer } from "@/stories/Timer"
 
 // window.addEventListener("load", () => {
 // 	navigator.serviceWorker.register("/service-worker.js")
@@ -33,10 +33,10 @@ export const Home = () => {
 		>
 			<Button
 				onClick={() => {
-					location.route("/dashboard")
+					location.route("/timer")
 				}}
 			>
-				Dashboard
+				Timer
 			</Button>
 			<Button
 				onClick={() => {
@@ -65,7 +65,7 @@ function App() {
 						<StatusBar />
 						<Router>
 							<Route component={Home} path="/" />
-							<Route component={Dashboard} path="/dashboard" />
+							<Route component={Timer} path="/timer" />
 							<Route component={LoreCounter} path="/lore-counter" />
 							<Route component={NotFound} path="*" />
 						</Router>
