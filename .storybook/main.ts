@@ -4,7 +4,11 @@ const config: StorybookConfig = {
 	addons: [],
 	framework: {
 		name: "@storybook/preact-vite",
-		options: {},
+		options: {
+			builder: {
+				viteConfigPath: "src/frontend/vite.config.ts",
+			},
+		},
 	},
 	stories: ["../src/frontend/**/*stories.@(js|jsx|mjs|ts|tsx)"],
 }
