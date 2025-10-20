@@ -1,5 +1,5 @@
+import { time } from "@lunagic/ares"
 import { useEffect, useState } from "preact/hooks"
-import { time } from "../time"
 
 export function useCurrentTime() {
 	const [currentTime, setCurrentTime] = useState(time.Now())

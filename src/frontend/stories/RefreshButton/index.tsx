@@ -1,10 +1,10 @@
+import { time } from "@lunagic/ares"
 import {
 	type Dispatch,
 	type StateUpdater,
 	useEffect,
 	useState,
 } from "preact/hooks"
-import { time } from "../../internal/time"
 import { Button } from "../Button"
 
 type RefreshButtonProps = {

@@ -1,4 +1,4 @@
-import { time } from "./time"
+import { time } from "@lunagic/ares"
 
 export namespace forge {
 	export function padWithZero(n: number) {

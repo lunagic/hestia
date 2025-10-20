@@ -1,6 +1,6 @@
+import { time } from "@lunagic/ares"
 import { useEffect, useState } from "preact/hooks"
 import { forge } from "../forge"
-import { time } from "../time"
 
 export type CurrentWeather = {
 	Display: string

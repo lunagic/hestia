@@ -1,8 +1,8 @@
+import { time } from "@lunagic/ares"
 import type { CSSProperties } from "preact/compat"
 import { useState } from "preact/hooks"
 import { forge } from "../../internal/forge"
 import { useCurrentTime } from "../../internal/hooks/useCurrentTime"
-import { time } from "../../internal/time"
 import { Button } from "../Button"
 import styles from "./styles.module.scss"
 
