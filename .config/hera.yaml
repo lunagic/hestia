@@ -10,7 +10,7 @@ services:
       - main.go
       - src/backend
     exclude:
-      - src/backend/resources
+      - src/backend/resources/dist
   frontend:
     command: make dev-npm
     watch:
