@@ -1,6 +1,7 @@
 export { useBatteryManager } from "./hooks/useBatteryManager"
 export { useCurrentTime } from "./hooks/useCurrentTime"
 export { useCurrentWeather } from "./hooks/useCurrentWeather"
+export { useFullScreenManager } from "./hooks/useFullScreenManager"
 export { Button } from "./stories/Button"
 export { DropDown } from "./stories/DropDown"
 export { FullScreen } from "./stories/FullScreen"

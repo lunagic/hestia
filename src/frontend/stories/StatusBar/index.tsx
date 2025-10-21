@@ -6,6 +6,7 @@ import {
 	useBatteryManager,
 	useCurrentTime,
 	useCurrentWeather,
+	useFullScreenManager,
 } from "@lunagic/aphrodite"
 import { ares } from "@lunagic/ares"
 import { useState } from "preact/hooks"
@@ -15,9 +16,7 @@ import styles from "./styles.module.scss"
 export const StatusBar = () => {
 	const [open, setOpen] = useState(false)
 	const [screenLocked, setScreenLocked] = useState(false)
-	const [fullscreen, setFullscreen] = useState(
-		document.fullscreenElement !== null,
-	)
+	const [fullscreen, setFullscreen] = useFullScreenManager()
 	const [needsRefresh, setNeedsRefresh] = useState(false)
 	const location = useLocation()
 	const currentTime = useCurrentTime()
@@ -44,7 +43,7 @@ export const StatusBar = () => {
 		)
 	}
 
-	if (!fullscreen) {
+	if (fullscreen === false) {
 		statusIcons.push(
 			<i
 				class="lni lni-expand-square-4"

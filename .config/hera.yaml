@@ -9,7 +9,8 @@ services:
       - go.sum
       - main.go
       - src/backend
-    exclude: []
+    exclude:
+      - src/backend/resources
   frontend:
     command: make dev-npm
     watch:

@@ -1,6 +1,5 @@
-import { dirname, resolve } from "node:path"
+import path, { dirname, resolve } from "node:path"
 import { fileURLToPath } from "node:url"
-import path from "path"
 import { defineConfig } from "vite"
 import tsconfigPaths from "vite-tsconfig-paths"
 

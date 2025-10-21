@@ -1,35 +1,14 @@
 import { Button } from "@lunagic/aphrodite"
-import { type Dispatch, type StateUpdater, useEffect } from "preact/hooks"
+import type { Dispatch, StateUpdater } from "preact/hooks"
 
 type FullScreenButtonProps = {
-	fullScreen: boolean
-	setFullScreen: Dispatch<StateUpdater<boolean>>
+	fullScreen: boolean | null
+	setFullScreen: Dispatch<StateUpdater<boolean | null>>
 }
 export const FullScreenButton = (props: FullScreenButtonProps) => {
-	// Do nothing if the browser does not allow full screen
-	if (!document.body.requestFullscreen) {
+	if (props.fullScreen === null) {
 		return
 	}
-
-	const handleFullscreenChange = () => {
-		props.setFullScreen(document.fullscreenElement !== null)
-	}
-
-	useEffect(() => {
-		if (!props.fullScreen) {
-			if (document.fullscreenElement !== null) {
-				document.exitFullscreen()
-			}
-		} else {
-			document.documentElement.requestFullscreen()
-		}
-
-		document.addEventListener("fullscreenchange", handleFullscreenChange)
-
-		return () => {
-			document.removeEventListener("fullscreenchange", handleFullscreenChange)
-		}
-	}, [props.fullScreen])
 
 	return (
 		<Button
