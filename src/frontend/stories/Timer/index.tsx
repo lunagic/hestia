@@ -114,6 +114,9 @@ export const Timer = () => {
 	return (
 		<div
 			className={styles.main}
+			onClick={() => {
+				setTargetTime(null)
+			}}
 			style={{
 				display: "flex",
 				flexDirection: "column",
@@ -122,9 +125,6 @@ export const Timer = () => {
 			}}
 		>
 			<div
-				onClick={() => {
-					setTargetTime(null)
-				}}
 				style={{
 					cursor: "pointer",
 					display: "flex",
